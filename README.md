@@ -13,11 +13,11 @@ https://source.android.com/setup/build/initializing
 
 Then, sync all the sources:
 ```
-$ repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r24
+$ repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r24 --depth=1 
 $ cd .repo
 $ git clone https://github.com/aosp11/local_manifests.git local_manifests
 $ cd ..
-$ repo sync -c --no-clone-bundle --no-tags
+$ repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j$(nproc --all)
 ```
 then:
 ```
