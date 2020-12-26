@@ -30,7 +30,7 @@ the images will be available in `out/target/product/dumpling`.
 To build an OTA:
 ```
 $ source build/envsetup.sh
-$ lunch aosp_cheeseburger-user
+$ lunch aosp_dumpling-user
 $ make -j12
 $ make otatools-package -j12
 $ make otapackage -j12
