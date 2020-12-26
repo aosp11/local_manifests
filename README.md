@@ -22,10 +22,10 @@ $ repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimiz
 then:
 ```
 $ source build/envsetup.sh
-$ lunch aosp_cheeseburger-user
-$ make -j12
+$ lunch aosp_dumpling-user
+$ make -j$(nproc --all)
 ```
-the images will be available in `out/target/product/cheeseburger`.
+the images will be available in `out/target/product/dumpling`.
 
 To build an OTA:
 ```
