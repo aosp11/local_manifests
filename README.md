@@ -22,7 +22,7 @@ $ repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimiz
 then:
 ```
 $ source build/envsetup.sh
-$ lunch aosp_dumpling-user
+$ lunch aosp_dumpling-userdebug
 $ make -j$(nproc --all)
 ```
 the images will be available in `out/target/product/dumpling`.
@@ -30,12 +30,12 @@ the images will be available in `out/target/product/dumpling`.
 To build an OTA:
 ```
 $ source build/envsetup.sh
-$ lunch aosp_dumpling-user
+$ lunch aosp_dumpling-userdebug
 $ make -j12
-$ make otatools-package -j12
-$ make otapackage -j12
+$ make otatools-package -j$(nproc --all)
+$ make otapackage -j$(nproc --all)
 ```
-and the OTA zip will be available in `out/target/product/cheeseburger`.
+and the OTA zip will be available in `out/target/product/dumpling`.
 
 # Flash instructions
 The images can be flashed using fastboot:
