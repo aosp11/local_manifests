@@ -31,7 +31,7 @@ To build an OTA:
 ```
 $ source build/envsetup.sh
 $ lunch aosp_dumpling-userdebug
-$ make -j12
+$ make -j(nproc --all)
 $ make otatools-package -j$(nproc --all)
 $ make otapackage -j$(nproc --all)
 ```
