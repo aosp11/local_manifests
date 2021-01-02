@@ -19,6 +19,16 @@ $ git clone https://github.com/aosp11/local_manifests.git local_manifests
 $ cd ..
 $ repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j$(nproc --all)
 ```
+Turn on caching to speed up build
+Make use of ccache if you want to speed up subsequent builds by running:
+```
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
+```
+and adding that line to your ~/.bashrc file. Then, specify the maximum amount of disk space you want ccache to use by typing this:
+```
+ccache -M 100G
+```
 then:
 ```
 $ source build/envsetup.sh
