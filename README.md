@@ -15,7 +15,6 @@ Then, sync all the sources:
 ```
 $ repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r27 --depth=1 
 $ git clone https://github.com/aosp11/local_manifests.git .repo/local_manifests
-$ cd ..
 $ repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j$(nproc --all)
 ```
 Turn on caching to speed up build
